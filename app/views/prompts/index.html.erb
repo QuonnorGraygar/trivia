@@ -1,0 +1,9 @@
+<h1>Trivia Question Bank</h1>
+
+<ul>
+	<% @prompts.each do |prompt| %>
+		<li>
+			<%= prompt.question[0..10]+'...' %>
+		</li>
+	<% end %>
+</ul>
