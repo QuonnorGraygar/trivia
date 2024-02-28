@@ -3,7 +3,7 @@
 <ul>
 	<% @prompts.each do |prompt| %>
 		<li>
-			<%= link_to prompt.question[0..10], prompt %>
+			<%= link_to prompt.title, prompt %>
 		</li>
 	<% end %>
 </ul>

@@ -4,3 +4,7 @@
 <li>Category: <%= @prompt.category %></li>
 <li>Question: <%= @prompt.question %></li>
 <li>Answer: <%= @prompt.answer %></li>
+
+<ul>
+	<li><%= link_to "Edit", edit_prompt_path(@prompt) %></li>
+</ul>

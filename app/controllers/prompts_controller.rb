@@ -22,6 +22,20 @@ class PromptsController < ApplicationController
 	end
   end
   
+  def edit
+	@prompt = Prompt.find(params[:id])
+  end
+  
+  def update
+	@prompt = Prompt.find(params[:id])
+	
+	if @prompt.update(prompt_params)
+	  redirect_to @prompt
+	else
+	  render :edit, status: :unprocessable_entity
+	end
+  end
+  
   private
 	def prompt_params
 	  params.require(:prompt).permit(

@@ -1,0 +1,48 @@
+<%= form_with model: prompt do |form| %>
+	<div>
+		<%= form.label :title %><br>
+		<%= form.text_field :title %>
+		<% @prompt.errors.full_messages_for(:title).each do |message| %>
+			<div><%= message %></div>
+		<% end %>
+	</div>
+	
+	<div>
+		<%= form.label :style %><br>
+		<%= form.text_field :style %>
+	</div>
+
+	<div>
+		<%= form.label :category %><br>
+		<%= form.text_field :category %>
+	</div>
+
+	<div>
+		<%= form.label :question %><br>
+		<%= form.text_area :question %>
+		<% @prompt.errors.full_messages_for(:question).each do |message| %>
+			<div><%= message %></div>
+		<% end %>
+	</div>	
+
+	<div>
+		<%= form.label :answer %><br>
+		<%= form.text_field :answer %>
+		<% @prompt.errors.full_messages_for(:answer).each do |message| %>
+			<div><%= message %></div>
+		<% end %>
+	</div>
+	
+	<div>
+		<%= form.label :value %><br>
+		<%= form.number_field :value %>
+		<% @prompt.errors.full_messages_for(:value).each do |message| %>
+			<div><%= message %></div>
+		<% end %>
+	</div>
+	
+	<div>
+		<%= form.submit %>
+	</div>
+
+<% end %>
