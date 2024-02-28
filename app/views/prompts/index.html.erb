@@ -3,7 +3,9 @@
 <ul>
 	<% @prompts.each do |prompt| %>
 		<li>
-			<%= prompt.question[0..10]+'...' %>
+			<%= link_to prompt.question[0..10], prompt %>
 		</li>
 	<% end %>
 </ul>
+
+<%= link_to "New Prompt", new_prompt_path %>
